@@ -5,6 +5,11 @@
 
 def sum arr
   # YOUR CODE HERE
+  result = 0
+  for i in arr
+    result = result + i
+  end
+  return result
 end
 
 def max_2_sum arr
