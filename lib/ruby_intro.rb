@@ -38,6 +38,20 @@ end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  if arr.count < 2  # if no 2+ array
+    return false
+  end
+
+  for i in arr
+    for j in arr
+      if i + j == n and i != j
+        return true
+      end
+    end
+  end
+
+  return false # return false if can not sum to n
+
 end
 
 # Part 2
