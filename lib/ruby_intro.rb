@@ -113,10 +113,26 @@ end
 
 class BookInStock
 # YOUR CODE HERE
-  attr_accessor :isbn, :price  # public varible
+  attr_accessor :isbn, :price, :price_as_string  # public varible
 
   def initialize(isbn,price)
-    @isbn  =  isbn
+
+    # ISBN
+    if isbn.length > 0
+      @isbn  =  isbn
+    else
+      raise ArgumentError,"Error: ISBN invalid"
+    end
+
+    # price
     @price =  price
+    if price > 0
+      @price  =  price
+    else
+      raise ArgumentError,"Error: price invalid"
+    end
   end
+
+  # price_as_string
+
 end
