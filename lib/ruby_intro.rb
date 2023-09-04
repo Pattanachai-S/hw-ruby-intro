@@ -58,10 +58,27 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  return "Hello, #{name}"
 end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if s == "" # if void
+    return false
+  end
+
+  not_con = ["a","e","i","o","u"]
+  consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+  con = {}
+  s_downcase = s.downcase
+
+  for i in consonants
+    if s_downcase[0] == i
+      return true
+    end
+  end
+
+  return false # other case
 end
 
 def binary_multiple_of_4? s
