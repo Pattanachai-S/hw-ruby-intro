@@ -83,6 +83,30 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+
+  # check s is binary
+  chars = s.split("")
+  for c in chars
+    if c != "0" and c != "1"
+      return false
+    end
+  end
+
+  if s == "0"  # if in put is "0"
+    return true
+  end
+
+  if chars.count < 3 # if binary < 100
+    return false
+  end
+
+  if chars[-1] == "0" and chars[-2] == "0"
+    return true
+  end
+
+
+  return false # for other case
+
 end
 
 # Part 3
