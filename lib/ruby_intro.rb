@@ -113,4 +113,10 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  attr_accessor :isbn, :price  # public varible
+
+  def initialize(isbn,price)
+    @isbn  =  isbn
+    @price =  price
+  end
 end
