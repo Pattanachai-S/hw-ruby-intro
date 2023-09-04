@@ -125,14 +125,22 @@ class BookInStock
     end
 
     # price
-    @price =  price
     if price > 0
       @price  =  price
     else
       raise ArgumentError,"Error: price invalid"
     end
+
+    # price_as_string
+    @price_as_string  =  "$#{price}"  # add $
+    # add .00
+    spl = @price_as_string.split(".")
+    if spl.count == 1  # if $ = $xx.00
+      @price_as_string = "#{price_as_string}.00"
+    elsif spl[1].length == 1 # if $ = $xx.x0
+      @price_as_string = "#{price_as_string}0"
+    end
   end
 
-  # price_as_string
 
 end
